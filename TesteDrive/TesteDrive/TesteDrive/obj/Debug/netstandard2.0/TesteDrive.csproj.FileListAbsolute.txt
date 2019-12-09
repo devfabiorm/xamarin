@@ -1,0 +1,14 @@
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\bin\Debug\netstandard2.0\TesteDrive.deps.json
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\bin\Debug\netstandard2.0\TesteDrive.dll
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\bin\Debug\netstandard2.0\ref\TesteDrive.dll
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\bin\Debug\netstandard2.0\TesteDrive.pdb
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\TesteDrive.AssemblyInfoInputs.cache
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\TesteDrive.AssemblyInfo.cs
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\TesteDrive.dll
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\ref\TesteDrive.dll
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\TesteDrive.pdb
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\TesteDrive.csprojAssemblyReference.cache
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\Views\ListagemView.xaml.g.cs
+C:\Users\Kisuke\source\repos\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\Views\DetalheView.xaml.g.cs
