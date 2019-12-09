@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kisuke\\source\\repos\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj": {}
+    "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kisuke\\source\\repos\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj": {
+    "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kisuke\\source\\repos\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj",
+        "projectUniqueName": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj",
         "projectName": "TesteDrive",
-        "projectPath": "C:\\Users\\Kisuke\\source\\repos\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj",
-        "packagesPath": "C:\\Users\\Kisuke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kisuke\\source\\repos\\TesteDrive\\TesteDrive\\TesteDrive\\obj\\",
+        "projectPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj",
+        "packagesPath": "C:\\Users\\Hit010\\.nuget\\packages\\",
+        "outputPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kisuke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hit010\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

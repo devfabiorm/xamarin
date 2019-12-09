@@ -4,12 +4,14 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="TesteDrive.Views.DetalheView">
+             x:Class="TesteDrive.Views.DetalheView"
+             Title="{Binding Veiculo.Nome}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="Esta é a página de detalhe"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="BotaoProximo" Text="Próximo" VerticalOptions="End" Clicked="BotaoProximo_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

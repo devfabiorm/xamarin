@@ -1005,24 +1005,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kisuke\\.nuget\\packages\\": {},
+    "C:\\Users\\Hit010\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kisuke\\source\\repos\\TesteDrive\\TesteDrive\\TesteDrive.iOS\\TesteDrive.iOS.csproj",
+      "projectUniqueName": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.iOS\\TesteDrive.iOS.csproj",
       "projectName": "TesteDrive.iOS",
-      "projectPath": "C:\\Users\\Kisuke\\source\\repos\\TesteDrive\\TesteDrive\\TesteDrive.iOS\\TesteDrive.iOS.csproj",
-      "packagesPath": "C:\\Users\\Kisuke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kisuke\\source\\repos\\TesteDrive\\TesteDrive\\TesteDrive.iOS\\obj\\",
+      "projectPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.iOS\\TesteDrive.iOS.csproj",
+      "packagesPath": "C:\\Users\\Hit010\\.nuget\\packages\\",
+      "outputPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Kisuke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hit010\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1036,8 +1036,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Kisuke\\source\\repos\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj": {
-              "projectPath": "C:\\Users\\Kisuke\\source\\repos\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj"
+            "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj": {
+              "projectPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj"
             }
           }
         }

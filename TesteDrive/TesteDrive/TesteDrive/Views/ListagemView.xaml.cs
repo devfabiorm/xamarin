@@ -46,7 +46,7 @@ namespace TesteDrive.Views
 
             //DisplayAlert("Test Drive", $"Você selecionou o carro {veiculo.Nome}, que custa {veiculo.Preco}", "OK");
 
-            Navigation.PushAsync(new DetalheView());
+            Navigation.PushAsync(new DetalheView(veiculo));
         }
     }
 }
