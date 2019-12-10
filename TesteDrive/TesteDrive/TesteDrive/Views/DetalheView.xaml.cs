@@ -48,17 +48,14 @@ namespace TesteDrive.Views
             get 
             {
                 return temFreioABS;
-            } 
-            set 
+            }
+            set
             {
                 temFreioABS = value; //valor que vem pelo Binding
 
-                if (temFreioABS)
-                {
-                    OnPropertyChanged();
-                    OnPropertyChanged(nameof(ValorTotal));
-                }
-            }
+                //OnPropertyChanged(); //Monitora a mudança na propriedade atual
+                OnPropertyChanged(nameof(ValorTotal)); //Monitora a mudança do propriedade matual e aciona a que foi passada como parâmetro
+            }   
         }
 
         public bool TemArCondicionado
@@ -70,12 +67,9 @@ namespace TesteDrive.Views
             set
             {
                 temArCondicionado = value; //valor que vem pelo Binding
-
-                if (temArCondicionado)
-                {
-                    OnPropertyChanged();
-                    OnPropertyChanged(nameof(ValorTotal));
-                }
+            
+                //OnPropertyChanged();
+                OnPropertyChanged(nameof(ValorTotal));
             }
         }
 
@@ -89,11 +83,8 @@ namespace TesteDrive.Views
             {
                 temMP3Player = value; //valor que vem pelo Binding
 
-                if (temMP3Player)
-                {
-                    OnPropertyChanged();
-                    OnPropertyChanged(nameof(ValorTotal));
-                }
+                //OnPropertyChanged();
+                OnPropertyChanged(nameof(ValorTotal));
             }
         }
 
@@ -101,7 +92,7 @@ namespace TesteDrive.Views
         {
             get
             {
-                return $"Total R${Veiculo.Preco + (temFreioABS ? FREIO_ABS : 0)}";
+                return $"Total R${Veiculo.Preco + (temFreioABS ? FREIO_ABS : 0) + (temArCondicionado ? AR_CONDICIONADO : 0) + (temMP3Player ? MP3_PLAYER : 0)}";
             }
         }
 
