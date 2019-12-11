@@ -1917,11 +1917,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\TesteDrive.Android.csproj",
+      "projectUniqueName": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\TesteDrive.Android.csproj",
       "projectName": "TesteDrive.Android",
-      "projectPath": "C:\\Xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\TesteDrive.Android.csproj",
+      "projectPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\TesteDrive.Android.csproj",
       "packagesPath": "C:\\Users\\Kisuke\\.nuget\\packages\\",
-      "outputPath": "C:\\Xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\obj\\",
+      "outputPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1942,8 +1942,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj": {
-              "projectPath": "C:\\Xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj"
+            "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj": {
+              "projectPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj"
             }
           }
         }
