@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TesteDrive.Models;
+using TesteDrive.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,96 +13,28 @@ namespace TesteDrive.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AgendamentoView : ContentPage
     {
-        public Agendamento Agendamento { get; set; }
-        public Veiculo Veiculo 
-        { 
-            get 
-            {
-                return Agendamento.Veiculo;
-            }
-            set
-            {
-                Agendamento.Veiculo = value;
-            }
-        }
-        public string Nome
-        {
-            get 
-            {
-                return Agendamento.Nome;
-            }
-            set 
-            {
-                Agendamento.Nome = value;
-            }
-        }
-        public string Fone
-        {
-            get 
-            {
-                return Agendamento.Fone;
-            }
-            set 
-            {
-                Agendamento.Fone = value;
-            } 
-        }
-        public string Email
-        {
-            get 
-            {
-                return Agendamento.Email;
-            }
-            set 
-            {
-                Agendamento.Email = value;
-            }
-        }
-
-        public DateTime DataAgendamento 
-        {
-            get 
-            {
-                return Agendamento.DataAgendamento;
-            }
-            set 
-            {
-                Agendamento.DataAgendamento = value;
-            } 
-        }
-        public TimeSpan HoraAgendamento
-        {
-            get
-            {
-                return Agendamento.HoraAgendamento;
-            }
-            set
-            {
-                Agendamento.HoraAgendamento = value;
-            }
-        }
+        public AgendamentoViewModel ViewModel { get; set; }
         public AgendamentoView(Veiculo veiculo)
         {
             InitializeComponent();
 
             //this.Title = veiculo.Nome;
-            this.Agendamento = new Agendamento();
+            
+            this.ViewModel = new AgendamentoViewModel(veiculo);
 
-            Agendamento.Veiculo = veiculo;
-
-            this.BindingContext = this;
+            this.BindingContext = this.ViewModel;
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("Agendamento",
-$@"Veículo: {Veiculo.Nome}
-Nome: {Nome}
-Fone: {Fone}
-E-mail: {Email}
-Data Agendada: {DataAgendamento.ToString("dd/MM/yyyy")}
-Hora Agendada: {HoraAgendamento}",
-        "OK");
+            $@"Veículo: {ViewModel.Agendamento.Veiculo.Nome}
+Nome: {ViewModel.Agendamento.Nome}
+Fone: {ViewModel.Agendamento.Fone}
+E-mail: {ViewModel.Agendamento.Email}
+Data Agendada: {ViewModel.Agendamento.DataAgendamento.ToString("dd/MM/yyyy")}
+Hora Agendada: {ViewModel.Agendamento.HoraAgendamento}",
+"OK");
         }
     }
 }
