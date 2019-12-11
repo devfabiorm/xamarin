@@ -31,7 +31,7 @@
                     </TableSection>
                 </TableRoot>
             </TableView>
-            <Button Text="Agendamedar" Clicked="Button_Clicked"></Button>
+            <Button Text="Agendar" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
