@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using TesteDrive.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,18 +12,12 @@ namespace TesteDrive.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DetalheView : ContentPage
     {
-        private const int FREIO_ABS = 800;
-        private const int AR_CONDICIONADO = 10000;
-        private const int MP3_PLAYER = 500;
-        bool temFreioABS;
-        bool temArCondicionado;
-        bool temMP3Player;
         public Veiculo Veiculo { get; set; }
         public string TextoFreioABS
         {
             get
             {
-                return $"Freio ABS - R$ {FREIO_ABS}";
+                return $"Freio ABS - R$ {Veiculo.FREIO_ABS}";
             }
         }
 
@@ -31,7 +25,7 @@ namespace TesteDrive.Views
         {
             get
             {
-                return $"Ar Condicionado R$ {AR_CONDICIONADO}";
+                return $"Ar Condicionado R$ {Veiculo.AR_CONDICIONADO}";
             }
         }
 
@@ -39,7 +33,7 @@ namespace TesteDrive.Views
         {
             get
             {
-                return $"MP3 Player - R$ {MP3_PLAYER}";
+                return $"MP3 Player - R$ {Veiculo.MP3_PLAYER}";
             }
         }
 
@@ -47,11 +41,11 @@ namespace TesteDrive.Views
         { 
             get 
             {
-                return temFreioABS;
+                return Veiculo.TemFreioABS;
             }
             set
             {
-                temFreioABS = value; //valor que vem pelo Binding
+                Veiculo.TemFreioABS = value; //valor que vem pelo Binding
 
                 //OnPropertyChanged(); //Monitora a mudança na propriedade atual
                 OnPropertyChanged(nameof(ValorTotal)); //Monitora a mudança do propriedade matual e aciona a que foi passada como parâmetro
@@ -62,11 +56,11 @@ namespace TesteDrive.Views
         {
             get
             {
-                return temArCondicionado;
+                return Veiculo.TemArCondicionado;
             }
             set
             {
-                temArCondicionado = value; //valor que vem pelo Binding
+                Veiculo.TemArCondicionado = value; //valor que vem pelo Binding
             
                 //OnPropertyChanged();
                 OnPropertyChanged(nameof(ValorTotal));
@@ -77,11 +71,11 @@ namespace TesteDrive.Views
         {
             get
             {
-                return temMP3Player;
+                return Veiculo.TemMP3Player;
             }
             set
             {
-                temMP3Player = value; //valor que vem pelo Binding
+                Veiculo.TemMP3Player = value; //valor que vem pelo Binding
 
                 //OnPropertyChanged();
                 OnPropertyChanged(nameof(ValorTotal));
@@ -92,7 +86,7 @@ namespace TesteDrive.Views
         {
             get
             {
-                return $"Total R${Veiculo.Preco + (temFreioABS ? FREIO_ABS : 0) + (temArCondicionado ? AR_CONDICIONADO : 0) + (temMP3Player ? MP3_PLAYER : 0)}";
+                return Veiculo.PrecoTotalFormatado;
             }
         }
 
