@@ -19,13 +19,13 @@ namespace TesteDrive.Views
             InitializeComponent();
 
             //this.Title = veiculo.Nome;
-            
+         
             this.ViewModel = new AgendamentoViewModel(veiculo);
 
             this.BindingContext = this.ViewModel;
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        /*private void Button_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("Agendamento",
             $@"Veículo: {ViewModel.Agendamento.Veiculo.Nome}
@@ -35,6 +35,22 @@ E-mail: {ViewModel.Agendamento.Email}
 Data Agendada: {ViewModel.Agendamento.DataAgendamento.ToString("dd/MM/yyyy")}
 Hora Agendada: {ViewModel.Agendamento.HoraAgendamento}",
 "OK");
+        }*/
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            MessagingCenter.Subscribe<Agendamento>(this, "Agendamento", (msg) =>
+            {
+                DisplayAlert("Agendamento",
+$@"Veículo: {ViewModel.Agendamento.Veiculo.Nome}
+Nome: {ViewModel.Agendamento.Nome}
+Fone: {ViewModel.Agendamento.Fone}
+E-mail: {ViewModel.Agendamento.Email}
+Data Agendada: {ViewModel.Agendamento.DataAgendamento.ToString("dd/MM/yyyy")}
+Hora Agendada: {ViewModel.Agendamento.HoraAgendamento}",
+            "OK");
+            });
         }
     }
 }

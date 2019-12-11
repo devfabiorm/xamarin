@@ -18,7 +18,7 @@
                     </TableSection>                   
                 </TableRoot>
             </TableView>
-            <Button x:Name="BotaoProximo" Text="Próximo" VerticalOptions="End" Clicked="BotaoProximo_Clicked"></Button>
+            <Button x:Name="BotaoProximo" Text="Próximo" VerticalOptions="End" Command="{Binding ProximoCommand}"></Button> <!-- Command é usado para fazer Binding de botões-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

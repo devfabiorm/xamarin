@@ -19,13 +19,31 @@ namespace TesteDrive.Views
             InitializeComponent();
         }
 
-        private void ListViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
+        /* private void ListViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
+         {
+             var veiculo = (Veiculo)e.Item;
+
+             //DisplayAlert("Test Drive", $"Você selecionou o carro {veiculo.Nome}, que custa {veiculo.Preco}", "OK");
+
+             Navigation.PushAsync(new DetalheView(veiculo));
+         } */
+
+        protected override void OnAppearing() //Esse método é chamado na hora que a página
         {
-            var veiculo = (Veiculo)e.Item;
+            base.OnAppearing();
+            //Subscribe é um método que procura  uma mensagem no MessagingCEnter com determinado nome para usar
+            MessagingCenter.Subscribe<Veiculo>(this, "VeiculoSelecionado",
+                (msg) => {
+                    Navigation.PushAsync(new DetalheView(msg));
+                });
+        }
 
-            //DisplayAlert("Test Drive", $"Você selecionou o carro {veiculo.Nome}, que custa {veiculo.Preco}", "OK");
+        //Unsubscribe é um método que procura  uma mensagem no MessagingCEnter com determinado nome para deixar de usar
+        protected override void OnDisappearing() 
+        {
+            base.OnDisappearing();
 
-            Navigation.PushAsync(new DetalheView(veiculo));
+            MessagingCenter.Unsubscribe<Veiculo>(this, "VeiculoSelecionado");
         }
     }
 }
