@@ -3,10 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mv="clr-namespace:TesteDrive.ViewModels"
              Title="Test Drive"
              mc:Ignorable="d"
              x:Class="TesteDrive.Views.ListagemView">
-
+    <ContentPage.BindingContext>
+        <mv:ListagemViewModel></mv:ListagemViewModel> <!-- Muda o contexto de Binding para o ModelView referênciado, no caso ListagemView -->
+    </ContentPage.BindingContext>
     <ListView x:Name="ListViewVeiculos" ItemsSource="{Binding Veiculos}" Margin="15" ItemTapped="ListViewVeiculos_ItemTapped"> <!--ListView permite que um agrupamento de grupos, ou seja, lista de listas de forma personalizada -->
         <ListView.ItemTemplate> <!-- É usado como base para visualização de uma lista de objetos e gerar um visualizações para cada um dos objetos a serem exibidos -->
             <DataTemplate> <!--É usado para exibir e gerenciar a aparencia de cada célula de um list View. Há diferentes usos como: embutido, como tipo e como recurso. No caso estamos usando embutido, e o filho dele deve ser do tipo Cell -->
