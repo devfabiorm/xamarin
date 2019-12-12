@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\TesteDrive.Android.csproj",
         "projectName": "TesteDrive.Android",
         "projectPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\TesteDrive.Android.csproj",
-        "packagesPath": "C:\\Users\\Hit010\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Kisuke\\.nuget\\packages\\",
         "outputPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
@@ -18,7 +18,7 @@
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Hit010\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kisuke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -64,14 +64,15 @@
         "projectUniqueName": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj",
         "projectName": "TesteDrive",
         "projectPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\TesteDrive.csproj",
-        "packagesPath": "C:\\Users\\Hit010\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Kisuke\\.nuget\\packages\\",
         "outputPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Hit010\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kisuke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -105,6 +106,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

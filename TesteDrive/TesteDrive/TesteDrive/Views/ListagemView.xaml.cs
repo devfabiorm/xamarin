@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TesteDrive.Models;
+using TesteDrive.ViewModels;
 using Xamarin.Forms;
 
 namespace TesteDrive.Views
@@ -14,9 +15,12 @@ namespace TesteDrive.Views
     [DesignTimeVisible(false)]
     public partial class ListagemView : ContentPage
     {
+        public ListagemViewModel ViewModel { get; set; }
         public ListagemView()
         {
             InitializeComponent();
+            this.ViewModel = new ListagemViewModel();
+            this.BindingContext = this.ViewModel;
         }
 
         /* private void ListViewVeiculos_ItemTapped(object sender, ItemTappedEventArgs e)
@@ -28,7 +32,7 @@ namespace TesteDrive.Views
              Navigation.PushAsync(new DetalheView(veiculo));
          } */
 
-        protected override void OnAppearing() //Esse método é chamado na hora que a página
+        protected async override void OnAppearing() //Esse método é chamado na hora que a página
         {
             base.OnAppearing();
             //Subscribe é um método que procura  uma mensagem no MessagingCEnter com determinado nome para usar
@@ -36,6 +40,8 @@ namespace TesteDrive.Views
                 (msg) => {
                     Navigation.PushAsync(new DetalheView(msg));
                 });
+
+            await this.ViewModel.GetVeiculos();
         }
 
         //Unsubscribe é um método que procura  uma mensagem no MessagingCEnter com determinado nome para deixar de usar
