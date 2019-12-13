@@ -27,3 +27,4 @@ C:\xamarin\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\ref\TesteDr
 C:\xamarin\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\TesteDrive.pdb
 C:\xamarin\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\TesteDrive.csprojAssemblyReference.cache
 C:\xamarin\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\XamlC.stamp
+C:\xamarin\TesteDrive\TesteDrive\TesteDrive\obj\Debug\netstandard2.0\Views\LoginView.xaml.g.cs

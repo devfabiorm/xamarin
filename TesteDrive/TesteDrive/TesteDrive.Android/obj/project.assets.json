@@ -2169,7 +2169,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kisuke\\.nuget\\packages\\": {},
+    "C:\\Users\\Hit010\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
@@ -2178,7 +2178,7 @@
       "projectUniqueName": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\TesteDrive.Android.csproj",
       "projectName": "TesteDrive.Android",
       "projectPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\TesteDrive.Android.csproj",
-      "packagesPath": "C:\\Users\\Kisuke\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Hit010\\.nuget\\packages\\",
       "outputPath": "C:\\xamarin\\TesteDrive\\TesteDrive\\TesteDrive.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
@@ -2186,7 +2186,7 @@
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Kisuke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hit010\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
