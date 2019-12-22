@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TesteDrive.Views.MasterView"
+             Title="Perfil"> <!-- Título é obrigatório quando dentro de um MasterDetailPage -->
+    <TabbedPage.Children>
+        <ContentPage Title="Usuário">
+            <ContentPage.Content>
+                <Frame OutlineColor="Silver" VerticalOptions="CenterAndExpand" Margin="15">
+                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                        <Label Text="{Binding Nome}"></Label>
+                        <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
+                        <Label Text="{Binding Email}"></Label>
+                        <BoxView Color="Gray" HeightRequest="1" HorizontalOptions="Fill"></BoxView>
+                        <Button Text="Perfil" Command="{Binding EditarPerfilCommand}"></Button>
+                    </StackLayout>
+                </Frame>
+            </ContentPage.Content>
+        </ContentPage>
+        <ContentPage Title="Editar">
+            <Frame OutlineColor="Silver" VerticalOptions="CenterAndExpand" Margin="15">
+                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <TableView>
+                        <TableRoot>
+                            <TableSection Title="Dados pessoais">
+                                <EntryCell Placeholder="Nome" Text="{Binding Nome}"></EntryCell>
+                                <EntryCell Placeholder="Telefone" Text="{Binding Telefone}"></EntryCell>
+                                <EntryCell Placeholder="Data de nascimento" Text="{Binding DataNascimento}"></EntryCell>
+                                <EntryCell Placeholder="E-mail" Text="{Binding Email}"></EntryCell>
+                            </TableSection>
+                        </TableRoot>
+                    </TableView>
+                    <Button Text="Salvar" Command="{Binding SalvarPerfilCommand}"></Button>
+                </StackLayout>
+            </Frame>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>

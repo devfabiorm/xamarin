@@ -16,5 +16,21 @@ namespace TesteDrive.Views
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            MessagingCenter.Subscribe<LoginExcepetion>(this, "FalhaLogin",
+                async (exc) =>
+                {
+                    await DisplayAlert("Login", exc.Message, "ok");
+                });
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            MessagingCenter.Unsubscribe<LoginExcepetion>(this, "FalhaLogin");
+        }
     }
 }

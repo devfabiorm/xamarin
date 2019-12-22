@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TesteDrive.Views.MasterDetailView"
+             xmlns:view="clr-namespace:TesteDrive.Views">
+   <!-- <MasterDetailPage.Master>
+        <view:MasterView></view:MasterView>
+    </MasterDetailPage.Master> -->
+    <MasterDetailPage.Detail>
+        <NavigationPage><!--Defino o inicio da pilha de navegação -->
+            <x:Arguments> <!-- Passa como argumento alguma View -->
+                <view:ListagemView></view:ListagemView> <!--Argumento passado que será o início da pilha de navegação-->
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
