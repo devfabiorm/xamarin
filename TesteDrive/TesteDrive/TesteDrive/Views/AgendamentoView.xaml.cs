@@ -40,17 +40,35 @@ Hora Agendada: {ViewModel.Agendamento.HoraAgendamento}",
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            MessagingCenter.Subscribe<Agendamento>(this, "Agendamento", (msg) =>
+            MessagingCenter.Subscribe<Agendamento>(this, "Agendamento", async (msg) =>
             {
-                DisplayAlert("Agendamento",
-$@"Veículo: {ViewModel.Agendamento.Veiculo.Nome}
-Nome: {ViewModel.Agendamento.Nome}
-Fone: {ViewModel.Agendamento.Fone}
-E-mail: {ViewModel.Agendamento.Email}
-Data Agendada: {ViewModel.Agendamento.DataAgendamento.ToString("dd/MM/yyyy")}
-Hora Agendada: {ViewModel.Agendamento.HoraAgendamento}",
-            "OK");
+                var confirma = await DisplayAlert("Agendar", "Deseja confirmar agendamento?", "SIM", "NÂO");
+
+                if (confirma)
+                {
+                    ViewModel.SalvarAgendamento();
+                }    
             });
+
+            MessagingCenter.Subscribe<Agendamento>(this, "SucessoAgendamento", (msg) => 
+            {
+                DisplayAlert("Agendamento", "Test Drive agendado com sucesso", "OK");
+            });
+
+            MessagingCenter.Subscribe<ArgumentException>(this, "FalhaAgendamento", (msg) =>
+            {
+                DisplayAlert("Agendamento", "Falha ao tentar agendar Test Drive. Verifique os dados e tente novamente mais tarde.", "OK");
+            });
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            MessagingCenter.Unsubscribe<Agendamento>(this, "Agendamento");
+
+            MessagingCenter.Unsubscribe<Agendamento>(this, "SucessoAgendamento");
+
+            MessagingCenter.Unsubscribe<ArgumentException>(this, "FalhaAgendamento");
         }
     }
 }

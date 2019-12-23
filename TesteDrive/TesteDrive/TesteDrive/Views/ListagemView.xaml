@@ -7,67 +7,69 @@
              Title="Test Drive"
              mc:Ignorable="d"
              x:Class="TesteDrive.Views.ListagemView">
-<!-- <ContentPage.BindingContext>
-        <mv:ListagemViewModel></mv:ListagemViewModel> Muda o contexto de Binding para o ModelView referênciado, no caso ListagemView 
-    </ContentPage.BindingContext> -->
-    <ListView x:Name="ListViewVeiculos" ItemsSource="{Binding Veiculos}" Margin="15" SelectedItem="{Binding VeiculoSelecionado}"> <!--ListView permite que um agrupamento de grupos, ou seja, lista de listas de forma personalizada. O SelectedItem substitui o ItemTapped que coloca um função no code behind para responder ao evento -->
-        <ListView.ItemTemplate> <!-- É usado como base para visualização de uma lista de objetos e gerar um visualizações para cada um dos objetos a serem exibidos -->
-            <DataTemplate> <!--É usado para exibir e gerenciar a aparencia de cada célula de um list View. Há diferentes usos como: embutido, como tipo e como recurso. No caso estamos usando embutido, e o filho dele deve ser do tipo Cell -->
-                <ViewCell> <!-- É uma celula que vai conter uma view a ser definida pelo desenvolvedor -->
-                    <ViewCell.View><!-- Um elemento visual usado para colocar os layouts e os controles na tela -->
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Nome}" FontSize="20" VerticalTextAlignment="Center"/>
-                            <Label Text=" - " VerticalTextAlignment="Center"/>
-                            <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalTextAlignment="Center"/>
-                        </StackLayout>
-                        <!-- <Label> Um view que exibe texto
-                            <Label.FormattedText> Perrmite a inserção ou obtenção de textos formatados
-                                <FormattedString> Representa um texto com atributos aplicados a algumas partes
-                                    <FormattedString.Spans> Obtem uma coleção de spans 
-                                        Spans são fragmentos de textos que podem ser formatados de forma diferente
-                                        <Span Text="Fiesta 2.0" FontSize="20"/>
-                                        <Span Text=" - " />
-                                        <Span Text="50000" FontAttributes="Bold"/>
-                                    </FormattedString.Spans>
-                                </FormattedString>
-                            </Label.FormattedText>
-                        </Label> -->
-                    </ViewCell.View>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackLayout>
+        <ActivityIndicator IsRunning="{Binding Aguarde}" IsVisible="{Binding Aguarde}"></ActivityIndicator> <!-- O ActivityIndicator é um controle visual do Xamarin Forms, usado para indicar que algo está sendo executado. -->
+        <!-- <ContentPage.BindingContext>
+            <mv:ListagemViewModel></mv:ListagemViewModel> Muda o contexto de Binding para o ModelView referênciado, no caso ListagemView 
+        </ContentPage.BindingContext> -->
+        <ListView x:Name="ListViewVeiculos" ItemsSource="{Binding Veiculos}" Margin="15" SelectedItem="{Binding VeiculoSelecionado}"> <!--ListView permite que um agrupamento de grupos, ou seja, lista de listas de forma personalizada. O SelectedItem substitui o ItemTapped que coloca um função no code behind para responder ao evento -->
+            <ListView.ItemTemplate> <!-- É usado como base para visualização de uma lista de objetos e gerar um visualizações para cada um dos objetos a serem exibidos -->
+                <DataTemplate> <!--É usado para exibir e gerenciar a aparencia de cada célula de um list View. Há diferentes usos como: embutido, como tipo e como recurso. No caso estamos usando embutido, e o filho dele deve ser do tipo Cell -->
+                    <ViewCell> <!-- É uma celula que vai conter uma view a ser definida pelo desenvolvedor -->
+                        <ViewCell.View><!-- Um elemento visual usado para colocar os layouts e os controles na tela -->
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Nome}" FontSize="20" VerticalTextAlignment="Center"/>
+                                <Label Text=" - " VerticalTextAlignment="Center"/>
+                                <Label Text="{Binding PrecoFormatado}" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                            <!-- <Label> Um view que exibe texto
+                                <Label.FormattedText> Perrmite a inserção ou obtenção de textos formatados
+                                    <FormattedString> Representa um texto com atributos aplicados a algumas partes
+                                        <FormattedString.Spans> Obtem uma coleção de spans 
+                                            Spans são fragmentos de textos que podem ser formatados de forma diferente
+                                            <Span Text="Fiesta 2.0" FontSize="20"/>
+                                            <Span Text=" - " />
+                                            <Span Text="50000" FontAttributes="Bold"/>
+                                        </FormattedString.Spans>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label> -->
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     
-    <!-- Grid implementa o modelo de grade, mas precisa de mais controles para definir que usará colunas (Grid.ColumnDefinition), e quantas colunas (cada ColumnDefinition), linhas (Grid.RowDefinition) e quantas linhas (RowDefinition) e cada coluna e linha precisa ser atrelada através da propriedade respectiva no controle Label a partir da posição 0 -->
-    <!--<Grid VerticalOptions="Start">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Text="Azera V6" />
-        <Label Grid.Column="1" Grid.Row="0" Text="60000" />
+        <!-- Grid implementa o modelo de grade, mas precisa de mais controles para definir que usará colunas (Grid.ColumnDefinition), e quantas colunas (cada ColumnDefinition), linhas (Grid.RowDefinition) e quantas linhas (RowDefinition) e cada coluna e linha precisa ser atrelada através da propriedade respectiva no controle Label a partir da posição 0 -->
+        <!--<Grid VerticalOptions="Start">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Text="Azera V6" />
+            <Label Grid.Column="1" Grid.Row="0" Text="60000" />
         
-        <Label Grid.Column="0" Grid.Row="1" Text="Fiesta 2.0" />
-        <Label Grid.Column="1" Grid.Row="1" Text="50000" />
+            <Label Grid.Column="0" Grid.Row="1" Text="Fiesta 2.0" />
+            <Label Grid.Column="1" Grid.Row="1" Text="50000" />
 
-        <Label Grid.Column="0" Grid.Row="2" Text="HB20 S" />
-        <Label Grid.Column="1" Grid.Row="2" Text="40000" />
+            <Label Grid.Column="0" Grid.Row="2" Text="HB20 S" />
+            <Label Grid.Column="1" Grid.Row="2" Text="40000" />
        
-    </Grid> -->
+        </Grid> -->
    
-    <!-- O controle StackSlyout empilha itens na vertical -->
-    <!-- <StackLayout>
-        <Label Text="Azera V6" />
-        <Label Text="60000" />
-        <Label Text="Fiesta 2.0" />
-        <Label Text="50000" />
-        <Label Text="HB20 S" />
-        <Label Text="40000" />
-    </StackLayout> -->
-
+        <!-- O controle StackSlyout empilha itens na vertical -->
+        <!-- <StackLayout>
+            <Label Text="Azera V6" />
+            <Label Text="60000" />
+            <Label Text="Fiesta 2.0" />
+            <Label Text="50000" />
+            <Label Text="HB20 S" />
+            <Label Text="40000" />
+        </StackLayout> -->
+    </StackLayout>
 </ContentPage>
