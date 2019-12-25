@@ -964,3 +964,5 @@ C:\xamarin\TesteDrive\TesteDrive\TesteDrive.Android\obj\Debug\90\stamp\_ConvertR
 C:\xamarin\TesteDrive\TesteDrive\TesteDrive.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\xamarin\TesteDrive\TesteDrive\TesteDrive.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\xamarin\TesteDrive\TesteDrive\TesteDrive.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\xamarin\TesteDrive\TesteDrive\TesteDrive.Android\obj\Debug\90\res\drawable\perfil.png
+C:\xamarin\TesteDrive\TesteDrive\TesteDrive.Android\obj\Debug\90\stamp\SetupDependenciesForDesigner.stamp
